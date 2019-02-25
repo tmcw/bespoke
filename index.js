@@ -4,6 +4,7 @@ const fs = require("fs");
 const prettyBytes = require("pretty-bytes");
 const sharp = require("sharp");
 
+const inputBuffer = fs.readFileSync(process.argv[2]);
 const name = process.argv[3];
 const today = new Date();
 
