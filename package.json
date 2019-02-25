@@ -1,0 +1,14 @@
+{
+  "name": "@tmcw/bespoke",
+  "description": "custom image resizing and converting utility",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": {
+    "bespoke": "index.js"
+  },
+  "dependencies": {
+    "pretty-bytes": "^5.1.0",
+    "sharp": "^0.21.3"
+  }
+}
