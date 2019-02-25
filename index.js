@@ -15,6 +15,7 @@ const prefix = `${today.getFullYear()}-${(today.getMonth() + 1)
   .toString()
   .padStart(2, "0")}-${name}`;
 
+fs.renameSync(process.argv[2], `${prefix}_original.jpg`);
 
 (async function() {
   for (let res of [128, 640, 1280, 2880]) {
