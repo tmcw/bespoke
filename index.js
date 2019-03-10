@@ -4,6 +4,11 @@ const fs = require("fs");
 const prettyBytes = require("pretty-bytes");
 const sharp = require("sharp");
 
+if (process.argv.length !== 4) {
+  console.error("usage: bespoke file.jpg name");
+  process.exit(0);
+}
+
 const inputBuffer = fs.readFileSync(process.argv[2]);
 const name = process.argv[3];
 const today = new Date();
