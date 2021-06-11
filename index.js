@@ -15,25 +15,18 @@ const today = new Date();
 
 const prefix = `${today.getFullYear()}-${(today.getMonth() + 1)
   .toString()
-  .padStart(2, "0")}-${today
-  .getDate()
-  .toString()
-  .padStart(2, "0")}-${name}`;
+  .padStart(2, "0")}-${today.getDate().toString().padStart(2, "0")}-${name}`;
 
 fs.renameSync(process.argv[2], `${prefix}_original.jpg`);
 
-(async function() {
+(async function () {
   for (let res of [128, 640, 1280, 2880]) {
     const jpgOutputFilename = `${prefix}_${res}.jpg`;
     const webpOutputFilename = `${prefix}_${res}.webp`;
 
-    await sharp(inputBuffer)
-      .resize(res)
-      .toFile(jpgOutputFilename);
+    await sharp(inputBuffer).resize(res).toFile(jpgOutputFilename);
 
-    await sharp(inputBuffer)
-      .resize(res)
-      .toFile(webpOutputFilename);
+    await sharp(inputBuffer).resize(res).toFile(webpOutputFilename);
 
     console.log(
       `${res}x webp ${prettyBytes(
