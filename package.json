@@ -8,7 +8,7 @@
     "bespoke": "index.js"
   },
   "dependencies": {
-    "pretty-bytes": "^5.6.0",
+    "pretty-bytes": "^6.0.0",
     "sharp": "^0.28.3"
   }
 }
