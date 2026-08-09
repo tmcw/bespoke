@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-const fs = require("fs");
-const prettyBytes = require("pretty-bytes");
-const sharp = require("sharp");
+import fs from "node:fs";
+import prettyBytes from "pretty-bytes";
+import sharp from "sharp";
 
 if (process.argv.length !== 4 && process.argv.length !== 5) {
   console.error("usage: bespoke file.jpg name (prefix)");
@@ -33,14 +33,14 @@ fs.renameSync(process.argv[2], `${prefix}-${name}_original.jpg`);
 
     console.log(
       `${res}x webp ${prettyBytes(
-        fs.readFileSync(webpOutputFilename).byteLength
-      )}`
+        fs.readFileSync(webpOutputFilename).byteLength,
+      )}`,
     );
 
     console.log(
       `${res}x jpg ${prettyBytes(
-        fs.readFileSync(jpgOutputFilename).byteLength
-      )}`
+        fs.readFileSync(jpgOutputFilename).byteLength,
+      )}`,
     );
   }
 })();
