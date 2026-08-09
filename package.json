@@ -1,5 +1,6 @@
 {
   "name": "@tmcw/bespoke",
+  "type": "module",
   "description": "custom image resizing and converting utility",
   "version": "1.0.3",
   "main": "index.js",
@@ -8,7 +9,7 @@
     "bespoke": "index.js"
   },
   "dependencies": {
-    "pretty-bytes": "^6.1.0",
-    "sharp": "^0.28.3"
+    "pretty-bytes": "^7.1.1",
+    "sharp": "^0.35.3"
   }
 }
