@@ -2,7 +2,7 @@
   "name": "@tmcw/bespoke",
   "type": "module",
   "description": "custom image resizing and converting utility",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "license": "MIT",
   "bin": {
